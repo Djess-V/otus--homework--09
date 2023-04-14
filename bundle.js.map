@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":"yBAEaA,SAASC,cAAc,SAE/BC,UAAY,Q","sources":["webpack://otus--homework--09/./src/index.js"],"sourcesContent":["import \"./sass/style.scss\";\n\nconst wrap = document.querySelector(\".wrap\");\n\nwrap.innerHTML = `Hello!`;\n"],"names":["document","querySelector","innerHTML"],"sourceRoot":""}

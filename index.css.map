@@ -1,0 +1,1 @@
+{"version":3,"file":"index.css","mappings":"AAAA,EACE,SACA","sources":["webpack://otus--homework--09/./src/sass/style.scss"],"sourcesContent":["* {\n  margin: 0;\n  padding: 0;\n}\n"],"names":[],"sourceRoot":""}
