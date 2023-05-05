@@ -1,4 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+@import "vars/vars.scss";
+@import "universal/universal.scss";
+@import "blocks/header.scss";
+@import "blocks/slider.scss";
+@import "blocks/facts.scss";
+//@import "blocks/section-hero.scss";
+// @import "blocks/section-new.scss";
+// @import "blocks/section-now.scss";
+// @import "blocks/section-blog.scss";
+// @import "blocks/footer.scss";

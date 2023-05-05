@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: rgb(220, 219, 219);
+}
+
+._container {
+  display: flex;
+  flex-direction: column;
+  background-color: inherit;
+  width: 98%;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 8px 8%;
+}
