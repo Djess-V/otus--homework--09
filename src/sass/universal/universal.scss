@@ -2,20 +2,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Lora", sans-serif;
+  color: $text-color-white;
+  font-weight: 700;
 }
 
 body {
-  background-color: rgb(220, 219, 219);
+  background-color: #e5e5e5;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 ._container {
-  display: flex;
-  flex-direction: column;
-  background-color: inherit;
-  width: 98%;
-  height: 100%;
-  max-width: 1440px;
+  width: 90%;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 8px 8%;
 }
