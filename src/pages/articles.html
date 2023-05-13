@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <%= require('html-loader!../html-templates/head.html').default %>
+    <title>RUNO Minimal Blog</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <%= require('html-loader!../html-templates/header.html').default %> <%=
+      require('html-loader!../html-templates/slider.html').default %> <%=
+      require('html-loader!../html-templates/articles.html').default %> <%=
+      require('html-loader!../html-templates/footer.html').default %>
+    </div>
+  </body>
+</html>

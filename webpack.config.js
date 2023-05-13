@@ -43,7 +43,20 @@ module.exports = (env) => ({
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "index.html",
+      filename: "index.html",
+      template: "./index.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "articles.html",
+      template: "./src/pages/articles.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "article.html",
+      template: "./src/pages/article.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "contactUs.html",
+      template: "./src/pages/contactUs.html",
     }),
     new MiniCssExtractPlugin(),
   ],

@@ -1,0 +1,43 @@
+<section class="contacts">
+  <div class="contacts__container _container contacts-container">
+    <form class="contacts-container__form form-contacts">
+      <h2 class="form-contacts__title">Enter contact information</h2>
+      <label class="form-contacts__label form-contacts__label_name" for="name"
+        >Name:</label
+      >
+      <input
+        class="form-contacts__input form-contacts__input_name"
+        id="name"
+        type="text"
+        pattern="^[а-яА-Яa-zA-Z0-9._]{1,20}$"
+        required
+      />
+      <label class="form-contacts__label form-contacts__label_email" for="email"
+        >E-mail:</label
+      >
+      <input
+        class="form-contacts__input form-contacts__input_email"
+        id="email"
+        type="email"
+        pattern="^[a-z0-9._]+@[a-z0-9._]+\.[a-z]{2,4}$"
+        required
+      />
+      <label class="form-contacts__label form-contacts__label_tel" for="tel"
+        >Mobile:</label
+      >
+      <input
+        class="form-contacts__input form-contacts__input_tel"
+        id="tel"
+        type="tel"
+        pattern="^\+?[7-8]{1}[9]{1}[0-9]{9}$"
+        required
+      />
+      <button class="form-contacts__button" type="submit">
+        Send informations
+      </button>
+    </form>
+    <p class="contacts-container__message">
+      Your information was successfully sent!
+    </p>
+  </div>
+</section>
