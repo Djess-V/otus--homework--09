@@ -13,16 +13,6 @@ function initial(element) {
     });
   }
 
-  const articles = element.querySelectorAll(".card-articles");
-
-  if (articles) {
-    articles.forEach((article) => {
-      article.addEventListener("click", (e) => {
-        window.location.href = `${window.location.origin}/article.html`;
-      });
-    });
-  }
-
   const form = element.querySelector(".form-contacts");
 
   if (form) {
