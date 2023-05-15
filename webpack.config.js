@@ -33,11 +33,7 @@ module.exports = (env) => ({
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /\.html$/i,
-        loader: "html-loader",
-      },
-      {
-        test: /\.(jpe?g)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
         generator: {
           filename: "images/[name][ext]",
@@ -47,7 +43,20 @@ module.exports = (env) => ({
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "index.html",
+      filename: "index.html",
+      template: "./index.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "articles.html",
+      template: "./src/pages/articles.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "article.html",
+      template: "./src/pages/article.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "contactUs.html",
+      template: "./src/pages/contactUs.html",
     }),
     new MiniCssExtractPlugin(),
   ],

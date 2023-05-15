@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lora", sans-serif;
+  color: $text-color-white;
+  font-weight: 700;
+}
+
+body {
+  background-color: #e5e5e5;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+._container {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+}

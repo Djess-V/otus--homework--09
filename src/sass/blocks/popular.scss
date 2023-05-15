@@ -1,0 +1,99 @@
+.popular {
+  padding: 50px 0 50px 0;
+  background-color: $text-color-white;
+}
+.popular-container {
+  &__title {
+    color: $text-color-black;
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+.content-popular {
+  &__card {
+    max-width: 400px;
+    height: 350px;
+    margin-bottom: 20px;
+  }
+}
+
+.card-popular {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  padding: 35px;
+  transition: all 0.5s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &__category {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    font-size: 10px;
+    line-height: 120%;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
+
+  & > img {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .card-popular {
+    height: 75vw;
+  }
+}
+
+@media (max-width: 395px) {
+  .card-popular {
+    padding: 5px 15px;
+  }
+}
+
+.card-content {
+  &__date {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 125%;
+    color: $text-color-grey;
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 139%;
+    margin: 15px 0;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 167%;
+    color: $text-color-grey;
+    text-align: justify;
+  }
+}

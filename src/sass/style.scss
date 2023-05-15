@@ -1,4 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+@import "vars/vars.scss";
+@import "universal/universal.scss";
+@import "blocks/header.scss";
+@import "blocks/slider.scss";
+@import "blocks/popular.scss";
+@import "blocks/articles.scss";
+@import "blocks/article.scss";
+@import "blocks/contactUs.scss";
+@import "blocks/footer.scss";

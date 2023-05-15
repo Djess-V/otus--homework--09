@@ -2,11 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <%= require('html-loader!./src/html-templates/head.html').default %>
+    <title>RUNO Minimal Blog</title>
   </head>
   <body>
-    <div class="wrap"></div>
+    <div class="wrapper">
+      <%= require('html-loader!./src/html-templates/header.html').default %> <%=
+      require('html-loader!./src/html-templates/slider.html').default %> <%=
+      require('html-loader!./src/html-templates/popular.html').default %> <%=
+      require('html-loader!./src/html-templates/footer.html').default %>
+    </div>
   </body>
 </html>
