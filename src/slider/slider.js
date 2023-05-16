@@ -19,28 +19,31 @@ export default class Slider {
 
   btnNext = null;
 
+  handlerPaging = this.handlerPagination.bind(this);
+
   constructor(element, options) {
-    try {
-      if (
-        options &&
-        "delay" in options &&
-        typeof options.delay === "number" &&
-        options.delay >= 6000
-      ) {
-        this.delay = options.delay;
-      }
-      this.slider = element;
-      this.images.items = this.slider.querySelectorAll(".slider-images__image");
-      this.images.length = this.images.items.length;
-      this.paginations.items = this.slider.querySelectorAll(
-        ".slider-pagination__item"
-      );
-      this.paginations.length = this.paginations.items.length;
-      this.btnPrev = this.slider.querySelector(".button-prev");
-      this.btnNext = this.slider.querySelector(".button-next");
-    } catch (e) {
-      console.log(e);
+    if (
+      options instanceof Object &&
+      "delay" in options &&
+      typeof options.delay === "number" &&
+      options.delay >= 6000 &&
+      options.delay <= 20000
+    ) {
+      this.delay = options.delay;
     }
+
+    if (!element) {
+      throw new Error("Элемент не передан!");
+    }
+    this.slider = element;
+    this.images.items = this.slider.querySelectorAll(".slider-images__image");
+    this.images.length = this.images.items.length;
+    this.paginations.items = this.slider.querySelectorAll(
+      ".slider-pagination__item"
+    );
+    this.paginations.length = this.paginations.items.length;
+    this.btnPrev = this.slider.querySelector(".button-prev");
+    this.btnNext = this.slider.querySelector(".button-next");
   }
 
   init() {
@@ -279,8 +282,6 @@ export default class Slider {
       this.prev();
     }
   }
-
-  handlerPaging = this.handlerPagination.bind(this);
 
   clearTimer() {
     clearInterval(this.timer);
