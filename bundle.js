@@ -1,2 +1,0 @@
-!function(){"use strict";var e=document.querySelector(".wrapper");window.addEventListener("load",(function(t){return function(e){var t=e.querySelectorAll(".nav-header__link");t&&t.forEach((function(e){window.location.pathname==="/".concat(e.id,".html")&&e.classList.add("nav-header__link_active")}));var n=e.querySelector(".form-contacts");n&&n.addEventListener("submit",(function(t){t.preventDefault(),e.querySelector(".contacts-container__message").style.opacity="1"}))}(e)}))}();
-//# sourceMappingURL=bundle.js.map
