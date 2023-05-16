@@ -1,16 +1,25 @@
 .header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+}
+
+.header-up {
+  display: flex;
   background: rgba(0, 0, 0, 0.2);
   height: 80px;
+  align-items: center;
+  z-index: 5;
 
   &__container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 30px 0;
   }
 }
 
-.header-container {
+.header-up-container {
   &__logo {
     font-weight: 700;
     font-size: 20px;
@@ -27,19 +36,19 @@
 }
 
 @media (max-width: 330px) {
-  .header-container__logo {
+  .header-up-container__logo {
     font-size: 16px;
   }
 }
 
-.header-r-block {
+.header-up-r-block {
   &__search-icon {
     padding: 0 10px;
     cursor: pointer;
   }
 }
 
-.nav-header {
+.nav-header-up {
   display: flex;
   align-items: center;
   border-right: 0.5px solid $text-color-grey;
@@ -67,15 +76,15 @@
 }
 
 @media (max-width: 610px) {
-  .nav-header__link {
+  .nav-header-up__link {
     display: none;
   }
-  .nav-header__nav-icon {
+  .nav-header-up__nav-icon {
     display: block;
   }
 }
 
-.header-social-icons {
+.header-up-social-icons {
   border-right: 0.5px solid $text-color-grey;
   padding: 0 5px;
 
@@ -86,8 +95,67 @@
 }
 
 @media (max-width: 370px) {
-  .header-social-icons__icon {
+  .header-up-social-icons__icon {
     width: 25px;
     height: 25px;
+  }
+}
+
+.header-down-container {
+  height: 520px;
+}
+
+.header-down-body {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 50px;
+  z-index: 2;
+
+  &__content {
+    width: 600px;
+  }
+}
+.header-down-content {
+  &__category {
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    font-size: 10px;
+    line-height: 120%;
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 127%;
+    margin: 15px 0;
+  }
+}
+.header-down-content-desc {
+  display: flex;
+  flex-direction: row;
+
+  &__data {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 125%;
+    color: $text-color-grey;
+  }
+
+  &__line {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 125%;
+    color: $text-color-grey;
+    margin: 0 10px 0;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 166%;
+    letter-spacing: 1px;
+    color: $text-color-grey;
+    margin-bottom: 60px;
   }
 }

@@ -22,5 +22,7 @@ module.exports = {
     ],
     "no-unused-vars": "off",
     "import/no-unresolved": [2, { ignore: ["\\.scss$"] }],
+    "no-restricted-syntax": "off",
+    "no-console": "off",
   },
 };

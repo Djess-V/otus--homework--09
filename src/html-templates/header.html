@@ -1,59 +1,118 @@
 <header class="header">
-  <div class="header__container header-container _container">
-    <span class="header-container__logo">RUNO</span>
-    <div class="header-container__right-block header-r-block">
-      <nav class="header-r-block__nav nav-header">
-        <a
-          id="index"
-          class="nav-header__link nav-header__link_home"
-          href="./index.html"
-          >Home</a
-        >
-        <a
-          id="articles"
-          class="nav-header__link nav-header__link_articles"
-          href="./articles.html"
-          >Articles</a
-        >
-        <a
-          id="contactUs"
-          class="nav-header__link nav-header__link_contact-us"
-          href="./contactUs.html"
-          >Contact Us</a
-        >
+  <div class="header__up header-up">
+    <div class="header-up__container header-up-container _container">
+      <span class="header-up-container__logo">RUNO</span>
+      <div class="header-up-container__right-block header-up-r-block">
+        <nav class="header-up-r-block__nav nav-header-up">
+          <a
+            id="index"
+            class="nav-header-up__link nav-header-up__link_home"
+            href="./index.html"
+            >Home</a
+          >
+          <a
+            id="articles"
+            class="nav-header-up__link nav-header-up__link_articles"
+            href="./articles.html"
+            >Articles</a
+          >
+          <a
+            id="contactUs"
+            class="nav-header-up__link nav-header-up__link_contact-us"
+            href="./contactUs.html"
+            >Contact Us</a
+          >
+          <img
+            class="nav-header-up__nav-icon"
+            src="../assets/images/menu-bars.svg"
+            alt="Nav-icon"
+          />
+        </nav>
+        <div class="header-up-r-block__social-icons header-up-social-icons">
+          <img
+            class="header-up-social-icons__icon"
+            src="../assets/images/facebook.svg"
+            alt="Facebook"
+          />
+          <img
+            class="header-up-social-icons__icon"
+            src="../assets/images/twitter.svg"
+            alt="Twitter"
+          />
+          <img
+            class="header-up-social-icons__icon"
+            src="../assets/images/youtube.svg"
+            alt="Youtube"
+          />
+          <img
+            class="header-up-social-icons__icon"
+            src="../assets/images/pinterest.svg"
+            alt="Pinterest"
+          />
+        </div>
         <img
-          class="nav-header__nav-icon"
-          src="../assets/images/menu-bars.svg"
-          alt="Nav-icon"
-        />
-      </nav>
-      <div class="header-r-block__social-icons header-social-icons">
-        <img
-          class="header-social-icons__icon"
-          src="../assets/images/facebook.svg"
-          alt="Facebook"
-        />
-        <img
-          class="header-social-icons__icon"
-          src="../assets/images/twitter.svg"
-          alt="Twitter"
-        />
-        <img
-          class="header-social-icons__icon"
-          src="../assets/images/youtube.svg"
-          alt="Youtube"
-        />
-        <img
-          class="header-social-icons__icon"
-          src="../assets/images/pinterest.svg"
-          alt="Pinterest"
+          class="header-up-r-block__search-icon"
+          src="../assets/images/search-icon.svg"
+          alt="Search"
         />
       </div>
-      <img
-        class="header-r-block__search-icon"
-        src="../assets/images/search-icon.svg"
-        alt="Search"
-      />
+    </div>
+  </div>
+  <div class="header__down header-down">
+    <div class="header-down__container header-down-container _container">
+      <div class="header-down-container__body header-down-body">
+        <section class="header-down-body__content header-down-content">
+          <span class="header-down-content__category">ADVENTURE</span>
+          <h1 class="header-down-content__title">
+            Richard Norton photorealistic rendering as real photos
+          </h1>
+          <div class="header-down-content__desc header-down-content-desc">
+            <div class="header-down-content-desc__data">10.05.2023</div>
+            <div class="header-down-content-desc__line">&mdash;&mdash;</div>
+            <p class="header-down-content-desc__text">
+              Progressively incentivize cooperative systems through technically
+              sound functionalities. The credibly productivate seamless data.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div id="headerSlider" class="header__slider slider">
+    <div class="slider__images slider-images">
+      <div class="slider-images__image slider-images__image_active">
+        <img src="../assets/images/slider_image1.png" alt="Slider_image1" />
+      </div>
+      <div class="slider-images__image">
+        <img src="../assets/images/slider_image2.png" alt="Slider_image2" />
+      </div>
+      <div class="slider-images__image">
+        <img src="../assets/images/slider_image3.png" alt="Slider_image3" />
+      </div>
+    </div>
+    <div class="slider__pagination slider-pagination">
+      <span
+        class="slider-pagination__item slider-pagination__item_active"
+        data-id="0"
+      ></span>
+      <span class="slider-pagination__item" data-id="1"></span>
+      <span class="slider-pagination__item" data-id="2"></span>
+    </div>
+    <div class="slider__buttons slider-buttons">
+      <a
+        class="slider-buttons__prev button-prev"
+        href="#headerSlider"
+        role="button"
+      >
+        <span class="button-prev__icon" aria-hidden="true"></span>
+      </a>
+      <a
+        class="slider-buttons__next button-next"
+        href="#headerSlider"
+        role="button"
+      >
+        <span class="button-next__icon" aria-hidden="true"></span>
+      </a>
     </div>
   </div>
 </header>

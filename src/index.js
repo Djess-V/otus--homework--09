@@ -1,3 +1,4 @@
+import Slider from "./slider/slider";
 import "./sass/style.scss";
 
 const wrapper = document.querySelector(".wrapper");
@@ -24,6 +25,10 @@ function initial(element) {
       message.style.opacity = "1";
     });
   }
+
+  const slider = new Slider(element.querySelector(".slider"), { delay: 5000 });
+
+  slider.init();
 }
 
 window.addEventListener("load", (e) => initial(wrapper));
