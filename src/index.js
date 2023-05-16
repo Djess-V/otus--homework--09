@@ -1,4 +1,4 @@
-import Slider from "./slider/Slider";
+import Slider from "./slider/slider";
 import "./sass/style.scss";
 
 const wrapper = document.querySelector(".wrapper");

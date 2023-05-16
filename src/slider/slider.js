@@ -19,7 +19,7 @@ export default class Slider {
 
   btnNext = null;
 
-  handlerPaging = this.handlerPagination.bind(this);
+  handlerPaging = this.handlePagination.bind(this);
 
   constructor(element, options) {
     if (
@@ -250,7 +250,7 @@ export default class Slider {
     }
   }
 
-  handlerPagination(e) {
+  handlePagination(e) {
     if (e.target.classList.contains("slider-pagination__item_active")) {
       return;
     }
