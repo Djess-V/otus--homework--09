@@ -7,7 +7,7 @@ module.exports = (env) => ({
   entry: { index: "./src/index.js" },
   output: {
     path: resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    filename: "[name].js",
     clean: true,
     environment: {
       arrowFunction: false,

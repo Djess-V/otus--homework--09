@@ -1,96 +1,135 @@
-.slider-container {
-  height: 515px;
-
-  &__image {
-    height: 100%;
-    left: 0;
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    width: 100%;
-
-    & > img {
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 595px;
-      object-fit: cover;
-    }
-  }
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 600px;
+  width: 100%;
 }
 
-.slider-body {
+.slider__images {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
   height: 100%;
-  display: flex;
-  align-items: flex-end;
-  padding-bottom: 50px;
+  overflow: hidden;
+  z-index: -1;
+}
 
-  &__content {
-    width: 600px;
+.slider-images__image {
+  position: absolute;
+  top: 0;
+  align-items: center;
+  display: none;
+  width: 100%;
+  transition: transform 1.5s linear;
+  backface-visibility: hidden;
+
+  img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
   }
 }
-.slider-content {
-  &__category {
-    padding: 5px 10px;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 8px;
-    font-size: 10px;
-    line-height: 120%;
-  }
 
-  &__title {
-    font-size: 36px;
-    line-height: 127%;
-    margin: 15px 0;
-  }
+.slider-images__image_active,
+.slider-images__image_next,
+.slider-images__image_prev {
+  display: block;
 }
-.slider-content-desc {
-  display: flex;
-  flex-direction: row;
 
-  &__data {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 125%;
-    color: $text-color-grey;
-  }
-
-  &__line {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 125%;
-    color: $text-color-grey;
-    margin: 0 10px 0;
-  }
-
-  &__text {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 166%;
-    letter-spacing: 1px;
-    color: $text-color-grey;
-    margin-bottom: 60px;
-  }
+.slider-images__image_next.slider-images__image_left,
+.slider-images__image_prev.slider-images__image_right {
+  transform: translateX(0);
 }
-.pagination-slider {
+
+.slider-images__image_next,
+.slider-images__image_active.slider-images__image_right {
+  transform: translateX(100%);
+}
+
+.slider-images__image_prev,
+.slider-images__image_active.slider-images__image_left {
+  transform: translateX(-100%);
+}
+
+.slider-pagination {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  left: 0;
+  z-index: 3;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 15%;
+  margin-left: 15%;
 
   &__item {
     cursor: pointer;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     background-color: rgba(255, 255, 255, 0.15);
-    border: 0.5px solid $text-color-black;
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
     border-radius: 50%;
+    z-index: 10;
 
     &:not(:last-child) {
-      margin-right: 8px;
+      margin-right: 20px;
     }
 
     &_active {
       background-color: $text-color-white;
     }
   }
+}
+
+.slider-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 699px) {
+  .slider-buttons {
+    align-items: start;
+    position: absolute;
+    top: 16%;
+  }
+}
+
+.button-prev,
+.button-next {
+  margin: 0 1%;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5;
+  z-index: 3;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: 0.9;
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+    cursor: pointer;
+  }
+}
+
+.button-prev__icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.button-next__icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
